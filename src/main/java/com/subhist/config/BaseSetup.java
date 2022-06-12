@@ -53,7 +53,7 @@ public class BaseSetup extends AppiumBaseDriver{
         capabilities.setCapability("--session-override",true);
         capabilities.setCapability("noReset", true);
         capabilities.setCapability("fullReset", false);
-        capabilities.setCapability("appActivity", "co.bytemark.splash.SplashScreenActivity");
+        capabilities.setCapability("appActivity", "xxxx");
         //capabilities.setCapability("app", appPath);
         driver = DriverConfig.getInstance().setDriver(new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities));
 
