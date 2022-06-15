@@ -25,6 +25,84 @@ public class AddNotePageLocators {
     @AndroidFindBy(id = "menu_btn")
     private MobileElement noteMenuButton;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Reminder']")
+    private MobileElement reminderButton;
+
+    @AndroidFindBy(xpath = "////android.widget.TextView[@text='Send']")
+    private MobileElement sendButton;
+
+    @AndroidFindBy(xpath = "////android.widget.TextView[@text='Lock']")
+    private MobileElement lockButton;
+
+    @AndroidFindBy(xpath = "////android.widget.TextView[@text='Discard']")
+    private MobileElement discardButton;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='DONE']")
+    private MobileElement doneButton;
+
+    @AndroidFindBy(xpath = "//android.widget.Toast")
+    private MobileElement toastForSaveConfirmation;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Calendar']")
+    private MobileElement saveCalenderButton;
+
+
+    public MobileElement getSaveCalenderButton() {
+        return saveCalenderButton;
+    }
+
+    public void setSaveCalenderButton(MobileElement saveCalenderButton) {
+        this.saveCalenderButton = saveCalenderButton;
+    }
+
+    public MobileElement getToastForSaveConfirmation() {
+        return toastForSaveConfirmation;
+    }
+
+    public void setToastForSaveConfirmation(MobileElement toastForSaveConfirmation) {
+        this.toastForSaveConfirmation = toastForSaveConfirmation;
+    }
+
+    public MobileElement getDoneButton() {
+        return doneButton;
+    }
+
+    public void setDoneButton(MobileElement doneButton) {
+        this.doneButton = doneButton;
+    }
+
+    public MobileElement getReminderButton() {
+        return reminderButton;
+    }
+
+    public void setReminderButton(MobileElement reminderButton) {
+        this.reminderButton = reminderButton;
+    }
+
+    public MobileElement getSendButton() {
+        return sendButton;
+    }
+
+    public void setSendButton(MobileElement sendButton) {
+        this.sendButton = sendButton;
+    }
+
+    public MobileElement getLockButton() {
+        return lockButton;
+    }
+
+    public void setLockButton(MobileElement lockButton) {
+        this.lockButton = lockButton;
+    }
+
+    public MobileElement getDiscardButton() {
+        return discardButton;
+    }
+
+    public void setDiscardButton(MobileElement discardButton) {
+        this.discardButton = discardButton;
+    }
+
     public MobileElement getAddTextButton() {
         return addTextButton;
     }

@@ -41,6 +41,84 @@ public class HomePageLocators {
     @AndroidFindBy(id = "main_btn3")
     private MobileElement viewTypeAndBackupOption;
 
+    @AndroidFindBy(id = "title")
+    private MobileElement reminderTitle;
+
+
+    @AndroidFindBy(id = "bottom_menu_delete")
+    private MobileElement deleteReminderButton;
+
+    @AndroidFindBy(id = "button1")
+    private MobileElement confirmDeleteButton;
+
+    @AndroidFindBy(id = "edit_search")
+    private MobileElement typeTheItemToSearch;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='View']")
+    private MobileElement selectViewOption;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Grid']")
+    private MobileElement selectGridView;
+
+    @AndroidFindBy(xpath = "//android.widget.GridView")
+    private MobileElement gridviewVerification;
+
+    public MobileElement getGridviewVerification() {
+        return gridviewVerification;
+    }
+
+    public void setGridviewVerification(MobileElement gridviewVerification) {
+        this.gridviewVerification = gridviewVerification;
+    }
+
+    public MobileElement getSelectGridView() {
+        return selectGridView;
+    }
+
+    public void setSelectGridView(MobileElement selectGridView) {
+        this.selectGridView = selectGridView;
+    }
+
+    public MobileElement getSelectViewOption() {
+        return selectViewOption;
+    }
+
+    public void setSelectViewOption(MobileElement selectViewOption) {
+        this.selectViewOption = selectViewOption;
+    }
+
+    public MobileElement getTypeTheItemToSearch() {
+        return typeTheItemToSearch;
+    }
+
+    public void setTypeTheItemToSearch(MobileElement typeTheItemToSearch) {
+        this.typeTheItemToSearch = typeTheItemToSearch;
+    }
+
+    public MobileElement getConfirmDeleteButton() {
+        return confirmDeleteButton;
+    }
+
+    public void setConfirmDeleteButton(MobileElement confirmDeleteButton) {
+        this.confirmDeleteButton = confirmDeleteButton;
+    }
+
+    public MobileElement getDeleteReminderButton() {
+        return deleteReminderButton;
+    }
+
+    public void setDeleteReminderButton(MobileElement deleteReminderButton) {
+        this.deleteReminderButton = deleteReminderButton;
+    }
+
+    public MobileElement getReminderTitle() {
+        return reminderTitle;
+    }
+
+    public void setReminderTitle(MobileElement reminderTitle) {
+        this.reminderTitle = reminderTitle;
+    }
+
     public MobileElement getSkipTutorial() {
         return skipTutorial;
     }

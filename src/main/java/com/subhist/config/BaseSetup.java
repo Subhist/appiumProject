@@ -1,15 +1,13 @@
 package com.subhist.config;
 
 import com.beust.jcommander.Parameters;
-import com.subhist.pageobjects.AddNotePageActions;
-import com.subhist.pageobjects.AddNotePageLocators;
-import com.subhist.pageobjects.HomePageActions;
-import com.subhist.pageobjects.HomePageLocators;
+import com.subhist.pageobjects.*;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
 import java.net.URL;
@@ -30,6 +28,10 @@ public class BaseSetup extends AppiumBaseDriver{
 
     public AddNotePageLocators addNotePageLocators;
     public AddNotePageActions addNotePageActions;
+    public CalanderPageLocators calanderPageLocators;
+    public CalenderPageActions calenderPageActions;
+
+    public static SoftAssert softAssert;
 
 
     @BeforeMethod(alwaysRun = true)
@@ -58,6 +60,7 @@ public class BaseSetup extends AppiumBaseDriver{
         capabilities.setCapability("platformVersion", this.platformVersion);
         capabilities.setCapability("appWaitForLaunch", "false");
         capabilities.setCapability("adbExecTimeout", 50000);
+        capabilities.setCapability("newCommandTimeout", "120000");
         capabilities.setCapability("systemPort", "8200");
         capabilities.setCapability("appPackage", this.apppackage);
         capabilities.setCapability("autoGrantPermissions", "true");
@@ -74,11 +77,15 @@ public class BaseSetup extends AppiumBaseDriver{
         this.homePageActions=new HomePageActions(driver);
         this.addNotePageLocators=new AddNotePageLocators(driver);
         this.addNotePageActions=new AddNotePageActions(driver);
+        this.calanderPageLocators=new CalanderPageLocators(driver);
+        this.calenderPageActions=new CalenderPageActions(driver);
+        softAssert=new SoftAssert();
 
     }
 
     @AfterMethod(alwaysRun = true)
     public void tearDown(){
+        softAssert.assertAll();
         driver.quit();
     }
 }
