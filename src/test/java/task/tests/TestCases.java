@@ -1,4 +1,4 @@
-package insta.tests;
+package task.tests;
 
 import com.subhist.config.BaseSetup;
 import org.testng.annotations.Test;
