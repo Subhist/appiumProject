@@ -16,6 +16,8 @@ public class AddNotePageActions extends AppiumBaseDriver {
     public AddNotePageActions(AppiumDriver driver) {
         this.addNotePageLocators=new AddNotePageLocators(driver);
     }
+
+    //add a Text or calender based on the Parameter
     public void addText(String reminder){
         Helper.SingleTap(addNotePageLocators.getAddTextButton());
         addNotePageLocators.getAddEditText().sendKeys(Helper.generateRandomString());

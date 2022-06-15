@@ -12,6 +12,7 @@ public class CalenderPageActions extends AppiumBaseDriver {
         this.calanderPageLocators=new CalanderPageLocators(driver);
     }
 
+    //select a date from calender
     public void selectDateToAddtoCalnder(){
         Helper.SingleTap(calanderPageLocators.getCalenderView());
         Helper.SingleTap(calanderPageLocators.getAddButton());

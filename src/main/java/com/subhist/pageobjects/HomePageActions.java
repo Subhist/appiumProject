@@ -13,7 +13,7 @@ public class HomePageActions  extends AppiumBaseDriver {
     }
 
 
-
+  //click on Add Img
     public void goToadd(){
         Helper.SingleTap(homePageLocators.getAddNoteImg());
 
@@ -21,6 +21,7 @@ public class HomePageActions  extends AppiumBaseDriver {
 
 
 
+    //delete a Reminder
     public void deleteReminder(){
         Helper.tapAndHold(homePageLocators.getReminderTitle());
         Helper.SingleTap(homePageLocators.getDeleteReminderButton());
@@ -29,6 +30,8 @@ public class HomePageActions  extends AppiumBaseDriver {
         BaseSetup.softAssert.assertTrue(homePageLocators.getAddNoteImg().isDisplayed());
     }
 
+
+    //search for a notes
     public void searchTheNotes(){
        String searchText= homePageLocators.getReminderTitle().getText();
         Helper.SingleTap(homePageLocators.getSearchButtonToSearchNotes());
@@ -38,23 +41,29 @@ public class HomePageActions  extends AppiumBaseDriver {
 
     }
 
+    //go to calender
     public void goToCalender(){
         Helper.SingleTap(homePageLocators.getCalenderButton());
     }
 
 
+    //add a reminder or calender using + button
     public void goToAddUsingPlusButton(){
         Helper.SingleTap(homePageLocators.getPlusButtonToAddNotes());
     }
 
+
+    //view and Backup Options
     public void goToViewAndBackUpOptions(){
         Helper.SingleTap(homePageLocators.getViewTypeAndBackupOption());
     }
 
+    //select View
     public void goToViewOptions(){
         Helper.SingleTap(homePageLocators.getSelectViewOption());
     }
 
+    //select a grid view
     public void selectGridView(){
         Helper.SingleTap(homePageLocators.getSelectGridView());
         BaseSetup.softAssert.assertTrue(homePageLocators.getGridviewVerification().isDisplayed());
